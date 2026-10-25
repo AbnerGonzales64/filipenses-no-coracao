@@ -4,17 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Filipenses no Coração</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <style>
-  body { margin: 0; background: #0d0d0d; color: #ddd; font-family: system-ui, sans-serif; text-align: center; }
-  main { max-width: 420px; margin: 0 auto; padding: 16px; }
-  .video { aspect-ratio: 9 / 16; background: #1a1a1a; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #777; font-size: 14px; }
-  .botao { display: none; margin: 20px auto 0; padding: 18px; border-radius: 8px; background: #c9a45c; color: #111; font-weight: bold; font-size: 18px; text-decoration: none; }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: rgb(242,236,224); color: rgb(31,58,52); font-family: 'Montserrat', system-ui, sans-serif; font-size: 16px; line-height: 1.6; text-align: center; overflow-x: hidden; min-height: 100vh; display: flex; flex-direction: column;
+    background-image: linear-gradient(rgb(201,164,92), rgb(201,164,92)); background-size: 100% 4px; background-repeat: no-repeat; }
+  main { flex: 1 0 auto; width: 100%; max-width: 440px; margin: 0 auto; padding: 48px 0 40px; }
+  .titulo { font-family: 'Montserrat', system-ui, sans-serif; font-weight: 400; font-size: 23px; line-height: 1.3; letter-spacing: -.005em; margin: 0 auto; padding: 0 22px; max-width: 400px; color: rgb(31,58,52); }
+  .titulo strong { color: rgb(168,128,52); font-weight: 700; }
+  .titulo::after { content: ""; display: block; width: 36px; height: 2px; margin: 18px auto 0; background: rgb(201,164,92); border-radius: 2px; }
+  .sub { font-size: 14.5px; line-height: 1.5; margin: 16px auto 0; padding: 0 44px; color: rgba(31,58,52,.78); }
+  .video { aspect-ratio: 9 / 16; width: calc(100% - 20px); margin: 38px auto 0; background: rgb(31,58,52); border: 1px solid rgb(201,164,92); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: rgb(242,236,224); font-family: 'Playfair Display', Georgia, serif; font-size: 18px; letter-spacing: .02em; box-shadow: 0 10px 28px rgba(31,58,52,.25); }
+  .botao { display: none; width: calc(100% - 40px); margin: 28px auto 0; padding: 20px 22px; border-radius: 999px; background: rgb(201,164,92); color: rgb(31,58,52); border: 1px solid rgb(31,58,52); font-family: 'Montserrat', system-ui, sans-serif; font-weight: 700; font-size: 17px; letter-spacing: .02em; text-decoration: none; line-height: 1.3; box-shadow: 0 10px 24px rgba(31,58,52,.35), inset 0 1px 0 rgba(255,255,255,.35); transition: transform .15s ease, box-shadow .15s ease; }
+  .botao:hover, .botao:focus-visible { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(31,58,52,.42); }
+  .botao:focus-visible { outline: 2px solid rgb(31,58,52); outline-offset: 3px; }
   .botao.visivel { display: block; }
-  footer { padding: 32px 16px; font-size: 13px; color: #888; }
+  footer { padding: 36px 20px 40px; background: rgb(31,58,52); border-top: 2px solid rgb(201,164,92); font-size: 13px; letter-spacing: .03em; color: rgb(242,236,224); }
 </style>
 </head>
 <body>
 <main>
+  <h1 class="titulo">Você não precisa de uma memória boa para <strong>memorizar um livro inteiro da Bíblia.</strong></h1>
+  <p class="sub">Na aula abaixo, eu mostro o método que uso:</p>
   <div class="video">[vídeo da aula]</div>
   <a class="botao" id="botao" href="#CHECKOUT">Quero memorizar Filipenses</a>
 </main>
