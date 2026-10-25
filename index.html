@@ -23,6 +23,19 @@
   .botao:focus-visible { outline: 2px solid rgb(31,58,52); outline-offset: 3px; }
   .botao.visivel { display: block; }
   footer { padding: 36px 20px 40px; background: rgb(31,58,52); border-top: 2px solid rgb(201,164,92); font-size: 13px; letter-spacing: .03em; color: rgb(242,236,224); }
+  .bloco { width: calc(100% - 40px); margin: 56px auto 0; text-align: left; }
+  .bloco h2 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 22px; text-align: center; margin: 0 0 20px; color: rgb(31,58,52); }
+  .bloco h2::after { content: ""; display: block; width: 36px; height: 2px; margin: 12px auto 0; background: rgb(201,164,92); border-radius: 2px; }
+  .foto { width: 140px; height: 140px; border-radius: 50%; margin: 0 auto 18px; background: rgb(31,58,52); border: 2px solid rgb(201,164,92); color: rgb(242,236,224); font-size: 12px; display: flex; align-items: center; justify-content: center; object-fit: cover; }
+  .bio p { text-align: left; font-size: 15px; margin: 0 0 14px; color: rgba(31,58,52,.85); }
+  .vai-ver { font-size: 16px; font-weight: 700; margin: 22px 0 14px; text-align: left; }
+  .pontos { list-style: none; padding: 0; margin: 0; }
+  .pontos li { position: relative; padding: 0 0 14px 26px; font-size: 15px; line-height: 1.5; }
+  .pontos li::before { content: ""; position: absolute; left: 4px; top: 8px; width: 9px; height: 9px; border-radius: 50%; background: rgb(201,164,92); }
+  .bio .fecho { text-align: left; font-weight: 700; font-size: 15px; margin: 6px 0 0; color: rgb(31,58,52); }
+  details { background: rgba(255,255,255,.55); border: 1px solid rgba(201,164,92,.6); border-radius: 6px; margin-bottom: 10px; overflow: hidden; }
+  summary { padding: 14px 16px; font-weight: 700; font-size: 14.5px; cursor: pointer; }
+  details p { margin: 0; padding: 0 16px 14px; font-size: 14.5px; line-height: 1.55; color: rgba(31,58,52,.85); }
 </style>
 </head>
 <body>
@@ -31,6 +44,22 @@
   <p class="sub">Na aula abaixo, eu mostro o método que uso:</p>
   <div class="video">[vídeo da aula]</div>
   <a class="botao" id="botao" href="#CHECKOUT">Quero memorizar Filipenses</a>
+
+  <section class="bloco bio">
+    <h2>Abner Gonzales</h2>
+    <div class="foto">[foto do Abner]</div>
+    <p>Piauiense, seminarista e missionário há mais de 10 anos, em Teresina, no interior do Piauí, em Atibaia-SP, na Coreia do Sul e em outros países.</p>
+    <p>Memorizei o livro de Jonas inteiro e hoje estou memorizando Romanos.</p>
+    <p>Depois de aplicar esse método em livros inteiros da Bíblia, resolvi mostrar o caminho para quem sempre quis memorizar a Palavra e achava que não tinha memória para isso.</p>
+    <p>Nessa aula eu mostro como é possível memorizar a carta de Filipenses inteira, 1 versículo por dia, sem depender de uma memória boa.</p>
+    <h3 class="vai-ver">Você vai ver:</h3>
+    <ul class="pontos">
+      <li>A rotina diária em 6 passos, com o vídeo pausando para você repetir.</li>
+      <li>Como 1 versículo por dia leva à carta inteira em 3,5 meses.</li>
+      <li>Como revisar de Fp 1.1 até o versículo do dia sem esquecer.</li>
+    </ul>
+    <p class="fecho">Se eu tivesse aprendido isso no começo, teria memorizado muito mais. Aproveite.</p>
+  </section>
 </main>
 <footer>© Filipenses no Coração · Abner Gonzales</footer>
 <script>
