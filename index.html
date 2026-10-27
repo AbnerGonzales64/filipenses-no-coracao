@@ -36,14 +36,21 @@
   details { background: rgba(255,255,255,.55); border: 1px solid rgba(201,164,92,.6); border-radius: 6px; margin-bottom: 10px; overflow: hidden; }
   summary { padding: 14px 16px; font-weight: 700; font-size: 14.5px; cursor: pointer; }
   details p { margin: 0; padding: 0 16px 14px; font-size: 14.5px; line-height: 1.55; color: rgba(31,58,52,.85); }
+  .video-wrap { position: relative; aspect-ratio: 9 / 16; width: calc(100% - 20px); margin: 38px auto 0; background: rgb(31,58,52); border: 1px solid rgb(201,164,92); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 28px rgba(31,58,52,.25); }
+  .video-wrap video { width: 100%; height: 100%; display: block; object-fit: cover; }
+  .som { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); padding: 14px 20px; border-radius: 999px; border: 1px solid rgb(201,164,92); background: rgba(31,58,52,.88); color: rgb(242,236,224); font-family: 'Montserrat', system-ui, sans-serif; font-weight: 700; font-size: 15px; cursor: pointer; }
+  .som[hidden] { display: none; }
 </style>
 </head>
 <body>
 <main>
   <h1 class="titulo">Você não precisa de uma memória boa para <strong>memorizar um livro inteiro da Bíblia.</strong></h1>
   <p class="sub">Na aula abaixo, eu mostro o método que uso:</p>
-  <div class="video">[vídeo da aula]</div>
-  <a class="botao" id="botao" href="#CHECKOUT">Quero memorizar Filipenses</a>
+  <div class="video-wrap">
+    <video id="aula" src="aula.mp4" poster="poster.jpg" autoplay muted playsinline preload="metadata"></video>
+    <button class="som" id="som" type="button">🔊 Toque para ouvir a aula</button>
+  </div>
+  <a class="botao" id="botao" href="https://pay.kiwify.com.br/jX8Ot5b">Quero memorizar Filipenses</a>
 
   <section class="bloco bio">
     <h2>Abner Gonzales</h2>
@@ -70,6 +77,14 @@
   setTimeout(function () {
     document.getElementById('botao').classList.add('visivel');
   }, TEMPO_BOTAO_SEGUNDOS * 1000);
+</script>
+<script>
+  (function () {
+    var v = document.getElementById('aula'), b = document.getElementById('som');
+    b.addEventListener('click', function () {
+      v.muted = false; v.currentTime = 0; v.controls = true; v.play(); b.hidden = true;
+    });
+  })();
 </script>
 </body>
 </html>
