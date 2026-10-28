@@ -41,6 +41,10 @@
   .som { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); padding: 14px 20px; border-radius: 999px; border: 1px solid rgb(201,164,92); background: rgba(31,58,52,.88); color: rgb(242,236,224); font-family: 'Montserrat', system-ui, sans-serif; font-weight: 700; font-size: 15px; cursor: pointer; }
   .som[hidden] { display: none; }
 </style>
+<!-- Meta Pixel Code -->
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1822550828886577');fbq('track','PageView');</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1822550828886577&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 <main>
@@ -84,6 +88,17 @@
     b.addEventListener('click', function () {
       v.muted = false; v.currentTime = 0; v.controls = true; v.play(); b.hidden = true;
     });
+  })();
+</script>
+<script>
+  (function () {
+    var a = document.getElementById('botao');
+    try {
+      var q = new URLSearchParams(location.search), u = new URL(a.href), n = 0;
+      q.forEach(function (v, k) { if (/^utm_|^fbclid$|^src$|^sck$/i.test(k) && !u.searchParams.has(k)) { u.searchParams.set(k, v); n++; } });
+      if (n) a.href = u.toString();
+    } catch (e) {}
+    a.addEventListener('click', function () { try { if (window.fbq) fbq('track', 'InitiateCheckout'); } catch (e) {} });
   })();
 </script>
 </body>
