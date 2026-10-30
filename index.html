@@ -40,6 +40,12 @@
   .video-wrap video { width: 100%; height: 100%; display: block; object-fit: cover; }
   .som { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); padding: 14px 20px; border-radius: 999px; border: 1px solid rgb(201,164,92); background: rgba(31,58,52,.88); color: rgb(242,236,224); font-family: 'Montserrat', system-ui, sans-serif; font-weight: 700; font-size: 15px; cursor: pointer; }
   .som[hidden] { display: none; }
+  .garantia { display: none; width: calc(100% - 40px); max-width: 420px; box-sizing: border-box; margin: 16px auto 0; padding: 14px 16px; gap: 12px; align-items: flex-start; text-align: left; background: rgb(31,58,52); color: rgb(242,236,224); border: 1px solid rgb(201,164,92); border-radius: 8px; box-shadow: 0 8px 20px rgba(31,58,52,.22); }
+  .botao.visivel + .garantia { display: flex; }
+  .garantia svg { flex: 0 0 34px; width: 34px; height: 34px; margin-top: 2px; }
+  .garantia .oferta { display: block; font-weight: 800; font-size: 17px; letter-spacing: .08em; color: rgb(201,164,92); line-height: 1.2; }
+  .garantia .prazo { display: block; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 16px; margin: 2px 0 6px; line-height: 1.3; }
+  .garantia p { margin: 0; font-size: 13.5px; line-height: 1.45; color: rgba(242,236,224,.9); }
 </style>
 <!-- Meta Pixel Code -->
 <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1822550828886577');fbq('track','PageView');</script>
@@ -55,6 +61,14 @@
     <button class="som" id="som" type="button">🔊 Toque para ouvir a aula</button>
   </div>
   <a class="botao" id="botao" href="https://pay.kiwify.com.br/jX8Ot5b">Quero memorizar Filipenses</a>
+  <div class="garantia">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="rgb(201,164,92)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l8 3v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10v-6l8-3z"/><path d="M8.3 12.2l2.6 2.6 4.9-5.2"/></svg>
+    <div>
+      <strong class="oferta">OFERTA ESPECIAL</strong>
+      <strong class="prazo">Garantia estendida de 30 dias</strong>
+      <p>Faça as aulas por 30 dias. Se você aplicar o método e não conseguir recitar os versículos, devolvemos 100% do valor.</p>
+    </div>
+  </div>
 
   <section class="bloco bio">
     <h2>Abner Gonzales</h2>
